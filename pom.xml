@@ -9,7 +9,8 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<spring.version>3.0.5.RELEASE</spring.version>
+		<spring.version>3.2.3.RELEASE</spring.version>
+	 	<jackson-mapper.version>1.9.13</jackson-mapper.version>
 	</properties>
 
 	<dependencies>
@@ -33,6 +34,11 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson-mapper.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
