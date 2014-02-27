@@ -1,0 +1,1211 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://web.mfm.com.mx/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://web.mfm.com.mx/">
+
+<xs:element name="BankServiceException" type="tns:BankServiceException"/>
+
+<xs:element name="GetAccountStatement" type="tns:GetAccountStatement"/>
+
+<xs:element name="GetAccountStatementResponse" type="tns:GetAccountStatementResponse"/>
+
+<xs:element name="GetAccountsInvestment" type="tns:GetAccountsInvestment"/>
+
+<xs:element name="GetAccountsInvestmentResponse" type="tns:GetAccountsInvestmentResponse"/>
+
+<xs:element name="GetAdministrarionGeneralProfile" type="tns:GetAdministrarionGeneralProfile"/>
+
+<xs:element name="GetAdministrarionGeneralProfileResponse" type="tns:GetAdministrarionGeneralProfileResponse"/>
+
+<xs:element name="GetAdministration" type="tns:GetAdministration"/>
+
+<xs:element name="GetAdministrationAccountsAlertConfig" type="tns:GetAdministrationAccountsAlertConfig"/>
+
+<xs:element name="GetAdministrationAccountsAlertConfigResponse" type="tns:GetAdministrationAccountsAlertConfigResponse"/>
+
+<xs:element name="GetAdministrationAccountsPermissions" type="tns:GetAdministrationAccountsPermissions"/>
+
+<xs:element name="GetAdministrationAccountsPermissionsResponse" type="tns:GetAdministrationAccountsPermissionsResponse"/>
+
+<xs:element name="GetAdministrationPersonalProfile" type="tns:GetAdministrationPersonalProfile"/>
+
+<xs:element name="GetAdministrationPersonalProfileResponse" type="tns:GetAdministrationPersonalProfileResponse"/>
+
+<xs:element name="GetAdministrationResponse" type="tns:GetAdministrationResponse"/>
+
+<xs:element name="GetAdministrationUserPassword" type="tns:GetAdministrationUserPassword"/>
+
+<xs:element name="GetAdministrationUserPasswordResponse" type="tns:GetAdministrationUserPasswordResponse"/>
+
+<xs:element name="GetAdministrationUserSignature" type="tns:GetAdministrationUserSignature"/>
+
+<xs:element name="GetAdministrationUserSignatureResponse" type="tns:GetAdministrationUserSignatureResponse"/>
+
+<xs:element name="GetAgreedOperationDetail" type="tns:GetAgreedOperationDetail"/>
+
+<xs:element name="GetAgreedOperationDetailResponse" type="tns:GetAgreedOperationDetailResponse"/>
+
+<xs:element name="GetAuthorizeChanges" type="tns:GetAuthorizeChanges"/>
+
+<xs:element name="GetAuthorizeChangesResponse" type="tns:GetAuthorizeChangesResponse"/>
+
+<xs:element name="GetAuthorizePendingOperationsUserChanges" type="tns:GetAuthorizePendingOperationsUserChanges"/>
+
+<xs:element name="GetAuthorizePendingOperationsUserChangesResponse" type="tns:GetAuthorizePendingOperationsUserChangesResponse"/>
+
+<xs:element name="GetBiometricAccounts" type="tns:GetBiometricAccounts"/>
+
+<xs:element name="GetBiometricAccountsResponse" type="tns:GetBiometricAccountsResponse"/>
+
+<xs:element name="GetConfirmDataInterbankRegister" type="tns:GetConfirmDataInterbankRegister"/>
+
+<xs:element name="GetConfirmDataInterbankRegisterResponse" type="tns:GetConfirmDataInterbankRegisterResponse"/>
+
+<xs:element name="GetConfirmDataInternationalRegister" type="tns:GetConfirmDataInternationalRegister"/>
+
+<xs:element name="GetConfirmDataInternationalRegisterResponse" type="tns:GetConfirmDataInternationalRegisterResponse"/>
+
+<xs:element name="GetConfirmDataRegister" type="tns:GetConfirmDataRegister"/>
+
+<xs:element name="GetConfirmDataRegisterResponse" type="tns:GetConfirmDataRegisterResponse"/>
+
+<xs:element name="GetConfirmInterbankRegister" type="tns:GetConfirmInterbankRegister"/>
+
+<xs:element name="GetConfirmInterbankRegisterResponse" type="tns:GetConfirmInterbankRegisterResponse"/>
+
+<xs:element name="GetConfirmRegister" type="tns:GetConfirmRegister"/>
+
+<xs:element name="GetConfirmRegisterResponse" type="tns:GetConfirmRegisterResponse"/>
+
+<xs:element name="GetConfrmInternationalRegister" type="tns:GetConfrmInternationalRegister"/>
+
+<xs:element name="GetConfrmInternationalRegisterResponse" type="tns:GetConfrmInternationalRegisterResponse"/>
+
+<xs:element name="GetCreditExpirationDate" type="tns:GetCreditExpirationDate"/>
+
+<xs:element name="GetCreditExpirationDateResponse" type="tns:GetCreditExpirationDateResponse"/>
+
+<xs:element name="GetCreditTransactions" type="tns:GetCreditTransactions"/>
+
+<xs:element name="GetCreditTransactionsResponse" type="tns:GetCreditTransactionsResponse"/>
+
+<xs:element name="GetCreditValueDate" type="tns:GetCreditValueDate"/>
+
+<xs:element name="GetCreditValueDateResponse" type="tns:GetCreditValueDateResponse"/>
+
+<xs:element name="GetDenyRegister" type="tns:GetDenyRegister"/>
+
+<xs:element name="GetDenyRegisterResponse" type="tns:GetDenyRegisterResponse"/>
+
+<xs:element name="GetModifyAccount" type="tns:GetModifyAccount"/>
+
+<xs:element name="GetModifyAccountResponse" type="tns:GetModifyAccountResponse"/>
+
+<xs:element name="GetPaidOperationDetail" type="tns:GetPaidOperationDetail"/>
+
+<xs:element name="GetPaidOperationDetailResponse" type="tns:GetPaidOperationDetailResponse"/>
+
+<xs:element name="GetPendingOperationsCredit" type="tns:GetPendingOperationsCredit"/>
+
+<xs:element name="GetPendingOperationsCreditResponse" type="tns:GetPendingOperationsCreditResponse"/>
+
+<xs:element name="GetRegisterInterbankAccount" type="tns:GetRegisterInterbankAccount"/>
+
+<xs:element name="GetRegisterInterbankAccountResponse" type="tns:GetRegisterInterbankAccountResponse"/>
+
+<xs:element name="GetRegisterInternationalAccount" type="tns:GetRegisterInternationalAccount"/>
+
+<xs:element name="GetRegisterInternationalAccountResponse" type="tns:GetRegisterInternationalAccountResponse"/>
+
+<xs:element name="GetRegisterNewAccount" type="tns:GetRegisterNewAccount"/>
+
+<xs:element name="GetRegisterNewAccountResponse" type="tns:GetRegisterNewAccountResponse"/>
+
+<xs:element name="GetTransactionConfirm" type="tns:GetTransactionConfirm"/>
+
+<xs:element name="GetTransactionConfirmResponse" type="tns:GetTransactionConfirmResponse"/>
+
+<xs:element name="GetTransactionDetailBiometricAccount" type="tns:GetTransactionDetailBiometricAccount"/>
+
+<xs:element name="GetTransactionDetailBiometricAccountResponse" type="tns:GetTransactionDetailBiometricAccountResponse"/>
+
+<xs:element name="GetTransactionInvestmentAccountDetail" type="tns:GetTransactionInvestmentAccountDetail"/>
+
+<xs:element name="GetTransactionInvestmentAccountDetailResponse" type="tns:GetTransactionInvestmentAccountDetailResponse"/>
+
+<xs:element name="GetTransactionStateDetailInvestment" type="tns:GetTransactionStateDetailInvestment"/>
+
+<xs:element name="GetTransactionStateDetailInvestmentResponse" type="tns:GetTransactionStateDetailInvestmentResponse"/>
+
+<xs:element name="GetTransactionsAuthorize" type="tns:GetTransactionsAuthorize"/>
+
+<xs:element name="GetTransactionsAuthorizeResponse" type="tns:GetTransactionsAuthorizeResponse"/>
+
+<xs:element name="GetTransactionsData" type="tns:GetTransactionsData"/>
+
+<xs:element name="GetTransactionsDataResponse" type="tns:GetTransactionsDataResponse"/>
+
+<xs:element name="GetTransactionsInterbankAuthorize" type="tns:GetTransactionsInterbankAuthorize"/>
+
+<xs:element name="GetTransactionsInterbankAuthorizeResponse" type="tns:GetTransactionsInterbankAuthorizeResponse"/>
+
+<xs:element name="GetTransactionsInterbankConfirm" type="tns:GetTransactionsInterbankConfirm"/>
+
+<xs:element name="GetTransactionsInterbankConfirmResponse" type="tns:GetTransactionsInterbankConfirmResponse"/>
+
+<xs:element name="GetTransactionsInternationalAuthorize" type="tns:GetTransactionsInternationalAuthorize"/>
+
+<xs:element name="GetTransactionsInternationalAuthorizeResponse" type="tns:GetTransactionsInternationalAuthorizeResponse"/>
+
+<xs:element name="GetTransactionsInternationalConfirm" type="tns:GetTransactionsInternationalConfirm"/>
+
+<xs:element name="GetTransactionsInternationalConfirmResponse" type="tns:GetTransactionsInternationalConfirmResponse"/>
+
+<xs:element name="GetTransactionsInternationalData" type="tns:GetTransactionsInternationalData"/>
+
+<xs:element name="GetTransactionsInternationalDataResponse" type="tns:GetTransactionsInternationalDataResponse"/>
+
+<xs:element name="GetTransactionsInternbanklData" type="tns:GetTransactionsInternbanklData"/>
+
+<xs:element name="GetTransactionsInternbanklDataResponse" type="tns:GetTransactionsInternbanklDataResponse"/>
+
+<xs:element name="Login" type="tns:Login"/>
+
+<xs:element name="LoginResponse" type="tns:LoginResponse"/>
+
+<xs:element name="Logout" type="tns:Logout"/>
+
+<xs:element name="LogoutResponse" type="tns:LogoutResponse"/>
+
+<xs:complexType name="GetConfirmRegister">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="username">
+<xs:sequence>
+<xs:element name="IdSession" type="xs:string" minOccurs="0"/>
+<xs:element name="request_date" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="user_type" type="xs:string" minOccurs="0"/>
+<xs:element name="IdVersion" type="xs:string" minOccurs="0"/>
+<xs:element name="Client" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetHighBeneficiary">
+<xs:sequence>
+<xs:element name="high" type="tns:highBeneficiary" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="highBeneficiary">
+<xs:sequence>
+<xs:element name="BeneficiaryAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="AliasAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="Email" type="xs:string" minOccurs="0"/>
+<xs:element name="Bank" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountHolder" type="xs:string" minOccurs="0"/>
+<xs:element name="ABACode" type="xs:boolean" minOccurs="0"/>
+<xs:element name="BICCode" type="xs:boolean" minOccurs="0"/>
+<xs:element name="BeneficiaryCurrencyAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="BeneficiaryName" type="xs:string" minOccurs="0"/>
+<xs:element name="BeneficiaryAddress" type="xs:string" minOccurs="0"/>
+<xs:element name="BeneficiaryCity" type="xs:string" minOccurs="0"/>
+<xs:element name="BeneficiaryCountry" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BankServiceException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsData">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsDataResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetTransactions">
+<xs:sequence>
+<xs:element name="transfer" type="tns:transfers" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="transfers">
+<xs:sequence>
+<xs:element name="RetirementAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency2" type="xs:string" minOccurs="0"/>
+<xs:element name="OperationAmount" type="xs:string" minOccurs="0"/>
+<xs:element name="PaymentSchedule" type="xs:boolean" minOccurs="0"/>
+<xs:element name="TaxReceipt" type="xs:boolean" minOccurs="0"/>
+<xs:element name="RFCThird" type="xs:string" minOccurs="0"/>
+<xs:element name="SearchAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="DepositAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="Alias" type="xs:string" minOccurs="0"/>
+<xs:element name="PaymentReason" type="xs:string" minOccurs="0"/>
+<xs:element name="DateApplication" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="Amount" type="xs:string" minOccurs="0"/>
+<xs:element name="Referenc" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmInterbankRegister">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmInterbankRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetCreditTransactions">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="FechaInicio" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="FechaFin" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetCreditTransactionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetCreditLine" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetCreditLine">
+<xs:sequence>
+<xs:element name="credit" type="tns:creditLine" minOccurs="0"/>
+<xs:element name="movement" type="tns:movements" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creditLine">
+<xs:sequence>
+<xs:element name="AuthorizedAmount" type="xs:string" minOccurs="0"/>
+<xs:element name="AmountWilling" type="xs:string" minOccurs="0"/>
+<xs:element name="AmountDispose" type="xs:string" minOccurs="0"/>
+<xs:element name="OpenProvisions" type="xs:string" minOccurs="0"/>
+<xs:element name="ExpirationDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="BackwardProvisions" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movements">
+<xs:sequence>
+<xs:element name="Operation" type="xs:string" minOccurs="0"/>
+<xs:element name="Description" type="xs:string" minOccurs="0"/>
+<xs:element name="Charge" type="xs:string" minOccurs="0"/>
+<xs:element name="Payment" type="xs:string" minOccurs="0"/>
+<xs:element name="RetirementAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="DepositAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="Beneficiary" type="xs:string" minOccurs="0"/>
+<xs:element name="RFC" type="xs:string" minOccurs="0"/>
+<xs:element name="Amount2" type="xs:string" minOccurs="0"/>
+<xs:element name="Reference" type="xs:string" minOccurs="0"/>
+<xs:element name="MaturityDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="AmountPayable" type="xs:string" minOccurs="0"/>
+<xs:element name="Status" type="xs:string" minOccurs="0"/>
+<xs:element name="DateValue" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="AmountAvailable" type="xs:string" minOccurs="0"/>
+<xs:element name="AmountShare" type="xs:string" minOccurs="0"/>
+<xs:element name="AmountReceivable" type="xs:string" minOccurs="0"/>
+<xs:element name="OperationDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="Term" type="xs:string" minOccurs="0"/>
+<xs:element name="AgreedTC" type="xs:string" minOccurs="0"/>
+<xs:element name="Product" type="xs:string" minOccurs="0"/>
+<xs:element name="Amount" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+<xs:element name="Client" type="xs:string" minOccurs="0"/>
+<xs:element name="Created_at" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionConfirm">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="EnviarA" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionConfirmResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternationalConfirm">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="EnviarA" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternationalConfirmResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionInvestmentAccountDetail">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="EnviarA" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionInvestmentAccountDetailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactionInvestmentAccountDetail" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetTransactionInvestmentAccountDetail">
+<xs:sequence>
+<xs:element name="client" type="tns:client" minOccurs="0"/>
+<xs:element name="pagare" type="tns:promissoryPerformance" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="client">
+<xs:sequence>
+<xs:element name="IdClient" type="xs:string" minOccurs="0"/>
+<xs:element name="NameClient" type="xs:string" minOccurs="0"/>
+<xs:element name="InitialCapital" type="xs:string" minOccurs="0"/>
+<xs:element name="DestinationBank" type="xs:string" minOccurs="0"/>
+<xs:element name="DestinationAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="StartDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="EndDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="Tasa" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="promissoryPerformance">
+<xs:sequence>
+<xs:element name="MonthlyInterest" type="xs:string" minOccurs="0"/>
+<xs:element name="Retention060" type="xs:string" minOccurs="0"/>
+<xs:element name="NetInterest" type="xs:string" minOccurs="0"/>
+<xs:element name="RetirementInterests" type="xs:string" minOccurs="0"/>
+<xs:element name="Created_At" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetPaidOperationDetail">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Operacion" type="xs:string" minOccurs="0"/>
+<xs:element name="EnviarA" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetPaidOperationDetailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetDetailOperation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetDetailOperation">
+<xs:sequence>
+<xs:element name="movement" type="tns:movements" minOccurs="0"/>
+<xs:element name="beneficiary" type="tns:beneficiaries" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="beneficiaries">
+<xs:sequence>
+<xs:element name="BeneficiaryName" type="xs:string" minOccurs="0"/>
+<xs:element name="Amount" type="xs:string" minOccurs="0"/>
+<xs:element name="Bank" type="xs:string" minOccurs="0"/>
+<xs:element name="BeneficiaryAccount" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrarionGeneralProfile">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="DatosModificar" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrarionGeneralProfileResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetGeneralData" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetGeneralData">
+<xs:sequence>
+<xs:element name="general" type="tns:generalData" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generalData">
+<xs:sequence>
+<xs:element name="StreetNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="Colony" type="xs:string" minOccurs="0"/>
+<xs:element name="CP" type="xs:string" minOccurs="0"/>
+<xs:element name="City" type="xs:string" minOccurs="0"/>
+<xs:element name="State" type="xs:string" minOccurs="0"/>
+<xs:element name="MobilePhone" type="xs:string" minOccurs="0"/>
+<xs:element name="Email" type="xs:string" minOccurs="0"/>
+<xs:element name="RFC" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Logout">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="idSession" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LogoutResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmDataInternationalRegister">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmDataInternationalRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationUserSignature">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="DatosModificar" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationUserSignatureResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetPowerFirm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetPowerFirm">
+<xs:sequence>
+<xs:element name="power" type="tns:powerFirm" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="powerFirm">
+<xs:sequence>
+<xs:element name="IdPowerFirm" type="xs:string" minOccurs="0"/>
+<xs:element name="Individual" type="xs:boolean" minOccurs="0"/>
+<xs:element name="Joint" type="xs:boolean" minOccurs="0"/>
+<xs:element name="WithoutPower" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetModifyAccount">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetModifyAccountResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetModifyAccount" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetModifyAccount">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="account" type="tns:modifyAccount" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modifyAccount">
+<xs:sequence>
+<xs:element name="Select" type="xs:boolean" minOccurs="0"/>
+<xs:element name="Alias" type="xs:string" minOccurs="0"/>
+<xs:element name="Bank" type="xs:string" minOccurs="0"/>
+<xs:element name="Beneficiary" type="xs:string" minOccurs="0"/>
+<xs:element name="Number" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternationalData">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternationalDataResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationAccountsAlertConfig">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationAccountsAlertConfigResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetAdministrationAccountsAlertConfig" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetAdministrationAccountsAlertConfig">
+<xs:sequence>
+<xs:element name="shipping" type="tns:shippingMethod" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="alert" type="tns:configureAlerts" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="shippingMethod">
+<xs:sequence>
+<xs:element name="IdAlert" type="xs:string" minOccurs="0"/>
+<xs:element name="Email" type="xs:boolean" minOccurs="0"/>
+<xs:element name="Chat" type="xs:boolean" minOccurs="0"/>
+<xs:element name="EmailChat" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="configureAlerts">
+<xs:sequence>
+<xs:element name="IdAlert" type="xs:string" minOccurs="0"/>
+<xs:element name="Alert" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAccountStatement">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAccountStatementResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetRecord" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetRecord">
+<xs:sequence>
+<xs:element name="history" type="tns:record" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="biometric" type="tns:biometricAccounts" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="record">
+<xs:sequence>
+<xs:element name="Month" type="xs:string" minOccurs="0"/>
+<xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="Format" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="biometricAccounts">
+<xs:sequence>
+<xs:element name="Alias" type="xs:string" minOccurs="0"/>
+<xs:element name="Amount" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+<xs:element name="_Account_id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Login">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternationalAuthorize">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternationalAuthorizeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAuthorizeChanges">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAuthorizeChangesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetAuthorizeChanges" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetAuthorizeChanges">
+<xs:sequence>
+<xs:element name="session" type="tns:username" minOccurs="0"/>
+<xs:element name="change" type="tns:authorizeChanges" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authorizeChanges">
+<xs:sequence>
+<xs:element name="Abstract" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetPendingOperationsCredit">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetPendingOperationsCreditResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetAuthorizeOperations" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetAuthorizeOperations">
+<xs:sequence>
+<xs:element name="authorizes" type="tns:authorizeOperations" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authorizeOperations">
+<xs:sequence>
+<xs:element name="Select" type="xs:boolean" minOccurs="0"/>
+<xs:element name="NumberOperation" type="xs:string" minOccurs="0"/>
+<xs:element name="OperationDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="DescriptionModification" type="xs:string" minOccurs="0"/>
+<xs:element name="User" type="xs:string" minOccurs="0"/>
+<xs:element name="Amount" type="xs:string" minOccurs="0"/>
+<xs:element name="Status" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionStateDetailInvestment">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionStateDetailInvestmentResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactionStateDetailInvestment" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetTransactionStateDetailInvestment">
+<xs:sequence>
+<xs:element name="dcip" type="tns:detailedAccountInvestment" minOccurs="0"/>
+<xs:element name="dcid" type="tns:detailedAccountInvestment" minOccurs="0"/>
+<xs:element name="weight" type="tns:investmentWeights" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="inversion" type="tns:investments" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detailedAccountInvestment">
+<xs:sequence>
+<xs:element name="IdTypeCurrency" type="xs:string" minOccurs="0"/>
+<xs:element name="TotalCapital" type="xs:string" minOccurs="0"/>
+<xs:element name="InterestGenerated" type="xs:string" minOccurs="0"/>
+<xs:element name="RetiredInterests" type="xs:string" minOccurs="0"/>
+<xs:element name="RetiredGeneralInterestNot" type="xs:string" minOccurs="0"/>
+<xs:element name="GenerateInterest" type="xs:string" minOccurs="0"/>
+<xs:element name="Message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="investmentWeights">
+<xs:sequence>
+<xs:element name="Reference" type="xs:string" minOccurs="0"/>
+<xs:element name="StartDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="InvestmentType" type="xs:string" minOccurs="0"/>
+<xs:element name="Amount" type="xs:string" minOccurs="0"/>
+<xs:element name="Tasa" type="xs:string" minOccurs="0"/>
+<xs:element name="PeriodicityCoupons" type="xs:string" minOccurs="0"/>
+<xs:element name="MaturityDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="RemainingCoupons" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="investments">
+<xs:sequence>
+<xs:element name="Alias" type="xs:string" minOccurs="0"/>
+<xs:element name="Account" type="xs:string" minOccurs="0"/>
+<xs:element name="Balance" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+<xs:element name="Message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternbanklData">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInternbanklDataResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetCreditValueDate">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Estatus" type="xs:string" minOccurs="0"/>
+<xs:element name="FechaInicio" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="FechaFin" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetCreditValueDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetCreditLine" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetDenyRegister">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="EnviarAviso" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetDenyRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetDeclinationHigh" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetDeclinationHigh">
+<xs:sequence>
+<xs:element name="high" type="tns:declinationHigh" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="declinationHigh">
+<xs:sequence>
+<xs:element name="Alias" type="xs:string" minOccurs="0"/>
+<xs:element name="BeneficiaryName" type="xs:string" minOccurs="0"/>
+<xs:element name="BeneficiarySurname" type="xs:string" minOccurs="0"/>
+<xs:element name="CLABESPEI" type="xs:string" minOccurs="0"/>
+<xs:element name="Bank" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInterbankAuthorize">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInterbankAuthorizeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetRegisterInternationalAccount">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Account_Type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetRegisterInternationalAccountResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAccountsInvestment">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAccountsInvestmentResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetInvestmentAccountDetail" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetInvestmentAccountDetail">
+<xs:sequence>
+<xs:element name="dcip" type="tns:detailedAccountInvestment" minOccurs="0"/>
+<xs:element name="dcid" type="tns:detailedAccountInvestment" minOccurs="0"/>
+<xs:element name="inversion" type="tns:investments" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsAuthorize">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsAuthorizeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionDetailBiometricAccount">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="EnviarA" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionDetailBiometricAccountResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetDetailMovement" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetDetailMovement">
+<xs:sequence>
+<xs:element name="movement" type="tns:movements" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationPersonalProfile">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="DatosModificar" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationPersonalProfileResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetPersonalData" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetPersonalData">
+<xs:sequence>
+<xs:element name="personal" type="tns:personalData" minOccurs="0"/>
+<xs:element name="renovation" type="tns:accessKeyRenewalPeriod" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="personalData">
+<xs:sequence>
+<xs:element name="User" type="xs:string" minOccurs="0"/>
+<xs:element name="Name" type="xs:string" minOccurs="0"/>
+<xs:element name="PaternalSurname" type="xs:string" minOccurs="0"/>
+<xs:element name="MaternalSurname" type="xs:string" minOccurs="0"/>
+<xs:element name="Access" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accessKeyRenewalPeriod">
+<xs:sequence>
+<xs:element name="IdRenovation" type="xs:string" minOccurs="0"/>
+<xs:element name="NoRenewalPeriod" type="xs:boolean" minOccurs="0"/>
+<xs:element name="Monthly" type="xs:boolean" minOccurs="0"/>
+<xs:element name="Quarterly" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetCreditExpirationDate">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="VencimientoDia" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetCreditExpirationDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetCreditLine" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetBiometricAccounts">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="FechaInicio" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="FechaFin" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetBiometricAccountsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetBiometricAccounts" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetBiometricAccounts">
+<xs:sequence>
+<xs:element name="biometric" type="tns:biometricAccounts" minOccurs="0"/>
+<xs:element name="movement" type="tns:movements" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationAccountsPermissions">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationAccountsPermissionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetAdministracionCuentasPermisos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetAdministracionCuentasPermisos">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="transfer" type="tns:accountsTransfersPermissions" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="permission" type="tns:accountsPermissions" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accountsTransfersPermissions">
+<xs:sequence>
+<xs:element name="IdTransfer" type="xs:string" minOccurs="0"/>
+<xs:element name="Full" type="xs:boolean" minOccurs="0"/>
+<xs:element name="Consult" type="xs:boolean" minOccurs="0"/>
+<xs:element name="SameBank" type="xs:boolean" minOccurs="0"/>
+<xs:element name="Interbank" type="xs:boolean" minOccurs="0"/>
+<xs:element name="International" type="xs:boolean" minOccurs="0"/>
+<xs:element name="BiometricAuthorization" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accountsPermissions">
+<xs:sequence>
+<xs:element name="IdAccountsPermissions" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountsPermissions" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfrmInternationalRegister">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfrmInternationalRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAgreedOperationDetail">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAgreedOperationDetailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetDetailOperation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationUserPassword">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="DatosModificar" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationUserPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetAccessKey" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetAccessKey">
+<xs:sequence>
+<xs:element name="access" type="tns:accessKey" minOccurs="0"/>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accessKey">
+<xs:sequence>
+<xs:element name="AccessKey" type="xs:string" minOccurs="0"/>
+<xs:element name="ConfirmKeyAccess" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInterbankConfirm">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="EnviarA" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetTransactionsInterbankConfirmResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetTransactions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmDataRegister">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmDataRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetRegisterInterbankAccount">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Account_Type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetRegisterInterbankAccountResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmDataInterbankRegister">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetConfirmDataInterbankRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAuthorizePendingOperationsUserChanges">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Autoriza" type="xs:string" minOccurs="0"/>
+<xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAuthorizePendingOperationsUserChangesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetAuthorizeOperations" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetRegisterNewAccount">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="Account_Type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetRegisterNewAccountResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetHighBeneficiary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministration">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetAdministrationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:responseGetAccountsAdministration" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="responseGetAccountsAdministration">
+<xs:sequence>
+<xs:element name="username" type="tns:username" minOccurs="0"/>
+<xs:element name="account" type="tns:accountsAdministration" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accountsAdministration">
+<xs:sequence>
+<xs:element name="Alias" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountWeights" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountDollars" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency1" type="xs:string" minOccurs="0"/>
+<xs:element name="Currency2" type="xs:string" minOccurs="0"/>
+<xs:element name="Account_Type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

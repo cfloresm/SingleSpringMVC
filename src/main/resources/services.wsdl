@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.me.mfm.habil.mx/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MeWsService" targetNamespace="http://ws.me.mfm.habil.mx/">
+   <wsdl:types>
+      <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://jaxb.dev.java.net/array" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.me.mfm.habil.mx/">
+         <xs:import namespace="http://jaxb.dev.java.net/array" />
+         <xs:element name="firmaUsuario" type="tns:firmaUsuario" />
+         <xs:element name="firmaUsuarioResponse" type="tns:firmaUsuarioResponse" />
+         <xs:element name="recuperaBalanceCuentasBiometrica" type="tns:recuperaBalanceCuentasBiometrica" />
+         <xs:element name="recuperaBalanceCuentasBiometricaResponse" type="tns:recuperaBalanceCuentasBiometricaResponse" />
+         <xs:element name="recuperaBalanceCuentasCredito" type="tns:recuperaBalanceCuentasCredito" />
+         <xs:element name="recuperaBalanceCuentasCreditoResponse" type="tns:recuperaBalanceCuentasCreditoResponse" />
+         <xs:element name="recuperaBalanceCuentasInversiones" type="tns:recuperaBalanceCuentasInversiones" />
+         <xs:element name="recuperaBalanceCuentasInversionesResponse" type="tns:recuperaBalanceCuentasInversionesResponse" />
+         <xs:element name="recuperaCuentaCreditoMovimientos" type="tns:recuperaCuentaCreditoMovimientos" />
+         <xs:element name="recuperaCuentaCreditoMovimientosResponse" type="tns:recuperaCuentaCreditoMovimientosResponse" />
+         <xs:element name="recuperaCuentaCreditoPorFechaValor" type="tns:recuperaCuentaCreditoPorFechaValor" />
+         <xs:element name="recuperaCuentaCreditoPorFechaValorResponse" type="tns:recuperaCuentaCreditoPorFechaValorResponse" />
+         <xs:element name="recuperaCuentaCreditoPorFechaVencimiento" type="tns:recuperaCuentaCreditoPorFechaVencimiento" />
+         <xs:element name="recuperaCuentaCreditoPorFechaVencimientoResponse" type="tns:recuperaCuentaCreditoPorFechaVencimientoResponse" />
+         <xs:element name="recuperaDetalleCuentaCredito" type="tns:recuperaDetalleCuentaCredito" />
+         <xs:element name="recuperaDetalleCuentaCreditoResponse" type="tns:recuperaDetalleCuentaCreditoResponse" />
+         <xs:element name="recuperaEstadoCuenta" type="tns:recuperaEstadoCuenta" />
+         <xs:element name="recuperaEstadoCuentaResponse" type="tns:recuperaEstadoCuentaResponse" />
+         <xs:element name="recuperaInformacionUsuarioFirmado" type="tns:recuperaInformacionUsuarioFirmado" />
+         <xs:element name="recuperaInformacionUsuarioFirmadoResponse" type="tns:recuperaInformacionUsuarioFirmadoResponse" />
+         <xs:element name="salir" type="tns:salir" />
+         <xs:element name="salirResponse" type="tns:salirResponse" />
+         <xs:complexType name="salir">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="salirResponse">
+            <xs:sequence />
+         </xs:complexType>
+         <xs:complexType name="recuperaInformacionUsuarioFirmado">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaInformacionUsuarioFirmadoResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="usuarioDetalleDtoRecuperaInformacionUsuarioFirmadoOut" type="tns:usuarioDetalleDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="usuarioDetalleDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="apMaterno" type="xs:string" />
+               <xs:element minOccurs="0" name="apPaterno" type="xs:string" />
+               <xs:element minOccurs="0" name="email" type="xs:string" />
+               <xs:element minOccurs="0" name="nombre" type="xs:string" />
+               <xs:element minOccurs="0" name="tipoUsuario" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaCuentaCreditoPorFechaVencimiento">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="rowIdRecuperaCuentaCreditoPorFechaVencimientoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="fechaVencimientoRecuperaCuentaCreditoPorFechaVencimientoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="paginadoSolicitudDtoIn" type="tns:paginadoSolicitudDto" />
+               <xs:element form="qualified" minOccurs="0" name="ordenamientoSolicitudDtoIn" type="tns:ordenamientoSolicitudDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="paginadoSolicitudDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="numPaginaActual" type="xs:string" />
+               <xs:element minOccurs="0" name="numRegistrosPorPagina" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="ordenamientoSolicitudDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="columnaOrdenamiento" type="xs:string" />
+               <xs:element minOccurs="0" name="tipoOrdenamiento" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaCuentaCreditoPorFechaVencimientoResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoPorFechaVencimientoOut" type="tns:cuentaCreditoGridRespuestaDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="cuentaCreditoGridRespuestaDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="paginado" type="tns:paginadoRespuestaDto" />
+               <xs:element maxOccurs="unbounded" minOccurs="0" name="registros" nillable="true" type="ns1:stringArray" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="paginadoRespuestaDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="numPaginaActual" type="xs:string" />
+               <xs:element minOccurs="0" name="numRegistrosPorPagina" type="xs:string" />
+               <xs:element minOccurs="0" name="numTotalPaginas" type="xs:string" />
+               <xs:element minOccurs="0" name="numTotalRegistros" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaEstadoCuenta">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="rowIdRecuperaEstadoCuentaIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="paginadoSolicitudDtoIn" type="tns:paginadoSolicitudDto" />
+               <xs:element form="qualified" minOccurs="0" name="ordenamientoSolicitudDtoIn" type="tns:ordenamientoSolicitudDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaEstadoCuentaResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="estadoCuentaGridRespuestaDtoRecuperaEstadoCuentaOut" type="tns:estadoCuentaGridRespuestaDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="estadoCuentaGridRespuestaDto">
+            <xs:sequence />
+         </xs:complexType>
+         <xs:complexType name="recuperaBalanceCuentasInversiones">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="paginadoSolicitudDtoIn" type="tns:paginadoSolicitudDto" />
+               <xs:element form="qualified" minOccurs="0" name="ordenamientoSolicitudDtoIn" type="tns:ordenamientoSolicitudDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaBalanceCuentasInversionesResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="cuentaInversionGridRespuestaDtoRecuperaBalanceCuentasInversionesOut" type="tns:cuentaInversionGridRespuestaDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="cuentaInversionGridRespuestaDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="paginado" type="tns:paginadoRespuestaDto" />
+               <xs:element maxOccurs="unbounded" minOccurs="0" name="registros" nillable="true" type="ns1:stringArray" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="firmaUsuario">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="usuarioFirmaUsuarioIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="contrasenaFirmaUsuarioIn" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="firmaUsuarioResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdFirmaUsuarioOut" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaBalanceCuentasCredito">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="paginadoSolicitudDtoIn" type="tns:paginadoSolicitudDto" />
+               <xs:element form="qualified" minOccurs="0" name="ordenamientoSolicitudDtoIn" type="tns:ordenamientoSolicitudDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaBalanceCuentasCreditoResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="cuentaCreditoGridRespuestaDtoRecuperaBalanceCuentasCreditoOut" type="tns:cuentaCreditoGridRespuestaDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaCuentaCreditoMovimientos">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="rowIdRecuperaCuentaCreditoMovimientosIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="fechaInicioRecuperaCuentaCreditoMovimientosIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="fechaFinRecuperaCuentaCreditoMovimientosIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="paginadoSolicitudDtoIn" type="tns:paginadoSolicitudDto" />
+               <xs:element form="qualified" minOccurs="0" name="ordenamientoSolicitudDtoIn" type="tns:ordenamientoSolicitudDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaCuentaCreditoMovimientosResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoMovimientosOut" type="tns:cuentaCreditoGridRespuestaDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaBalanceCuentasBiometrica">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="paginadoSolicitudDtoIn" type="tns:paginadoSolicitudDto" />
+               <xs:element form="qualified" minOccurs="0" name="ordenamientoSolicitudDtoIn" type="tns:ordenamientoSolicitudDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaBalanceCuentasBiometricaResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="cuentaBiometricaGridRespuestaDtoRecuperaBalanceCuentasBiometricaOut" type="tns:cuentaBiometricaGridRespuestaDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="cuentaBiometricaGridRespuestaDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="paginado" type="tns:paginadoRespuestaDto" />
+               <xs:element maxOccurs="unbounded" minOccurs="0" name="registros" nillable="true" type="ns1:stringArray" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaCuentaCreditoPorFechaValor">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="rowIdRecuperaCuentaCreditoPorFechaVencimientoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="fechaInicioRecuperaCuentaCreditoPorFechaValorIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="fechaFinRecuperaCuentaCreditoPorFechaValorIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="estatusRecuperaCuentaCreditoPorFechaValorIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="paginadoSolicitudDtoIn" type="tns:paginadoSolicitudDto" />
+               <xs:element form="qualified" minOccurs="0" name="ordenamientoSolicitudDtoIn" type="tns:ordenamientoSolicitudDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaCuentaCreditoPorFechaValorResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoPorFechaValorOut" type="tns:cuentaCreditoGridRespuestaDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaDetalleCuentaCredito">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="sessionIdUsuarioFirmadoIn" type="xs:string" />
+               <xs:element form="qualified" minOccurs="0" name="rowIdRecuperaDetalleCuentaCreditoIn" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="recuperaDetalleCuentaCreditoResponse">
+            <xs:sequence>
+               <xs:element form="qualified" minOccurs="0" name="cuentaCreditoDetalleDtoRecuperaDetalleCuentaCreditoOut" type="tns:cuentaCreditoDetalleDto" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="cuentaCreditoDetalleDto">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="disposicionesAbiertas" type="xs:string" />
+               <xs:element minOccurs="0" name="disposicionesAtrasadas" type="xs:string" />
+               <xs:element minOccurs="0" name="divisa" type="xs:string" />
+               <xs:element minOccurs="0" name="fechaExpiracion" type="xs:string" />
+               <xs:element minOccurs="0" name="montoAutorizado" type="xs:string" />
+               <xs:element minOccurs="0" name="montoDisponible" type="xs:string" />
+               <xs:element minOccurs="0" name="montoDispuesto" type="xs:string" />
+               <xs:element minOccurs="0" name="rowId" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+         <xs:element name="MeException" type="tns:MeException" />
+         <xs:complexType name="MeException">
+            <xs:sequence />
+         </xs:complexType>
+      </xs:schema>
+      <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://jaxb.dev.java.net/array" version="1.0">
+         <xs:complexType final="#all" name="stringArray">
+            <xs:sequence>
+               <xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="xs:string" />
+            </xs:sequence>
+         </xs:complexType>
+      </xs:schema>
+   </wsdl:types>
+   <wsdl:message name="recuperaDetalleCuentaCredito">
+      <wsdl:part element="tns:recuperaDetalleCuentaCredito" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaInformacionUsuarioFirmado">
+      <wsdl:part element="tns:recuperaInformacionUsuarioFirmado" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaCuentaCreditoPorFechaVencimiento">
+      <wsdl:part element="tns:recuperaCuentaCreditoPorFechaVencimiento" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaEstadoCuenta">
+      <wsdl:part element="tns:recuperaEstadoCuenta" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="salirResponse">
+      <wsdl:part element="tns:salirResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaBalanceCuentasInversiones">
+      <wsdl:part element="tns:recuperaBalanceCuentasInversiones" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaBalanceCuentasInversionesResponse">
+      <wsdl:part element="tns:recuperaBalanceCuentasInversionesResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="salir">
+      <wsdl:part element="tns:salir" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="MeException">
+      <wsdl:part element="tns:MeException" name="MeException" />
+   </wsdl:message>
+   <wsdl:message name="recuperaEstadoCuentaResponse">
+      <wsdl:part element="tns:recuperaEstadoCuentaResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaCuentaCreditoPorFechaValorResponse">
+      <wsdl:part element="tns:recuperaCuentaCreditoPorFechaValorResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaBalanceCuentasBiometrica">
+      <wsdl:part element="tns:recuperaBalanceCuentasBiometrica" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaCuentaCreditoPorFechaVencimientoResponse">
+      <wsdl:part element="tns:recuperaCuentaCreditoPorFechaVencimientoResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="firmaUsuarioResponse">
+      <wsdl:part element="tns:firmaUsuarioResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="firmaUsuario">
+      <wsdl:part element="tns:firmaUsuario" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaCuentaCreditoPorFechaValor">
+      <wsdl:part element="tns:recuperaCuentaCreditoPorFechaValor" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaBalanceCuentasBiometricaResponse">
+      <wsdl:part element="tns:recuperaBalanceCuentasBiometricaResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaInformacionUsuarioFirmadoResponse">
+      <wsdl:part element="tns:recuperaInformacionUsuarioFirmadoResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaDetalleCuentaCreditoResponse">
+      <wsdl:part element="tns:recuperaDetalleCuentaCreditoResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaCuentaCreditoMovimientos">
+      <wsdl:part element="tns:recuperaCuentaCreditoMovimientos" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaBalanceCuentasCreditoResponse">
+      <wsdl:part element="tns:recuperaBalanceCuentasCreditoResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaCuentaCreditoMovimientosResponse">
+      <wsdl:part element="tns:recuperaCuentaCreditoMovimientosResponse" name="parameters" />
+   </wsdl:message>
+   <wsdl:message name="recuperaBalanceCuentasCredito">
+      <wsdl:part element="tns:recuperaBalanceCuentasCredito" name="parameters" />
+   </wsdl:message>
+   <wsdl:portType name="MeWs">
+      <wsdl:operation name="salir">
+         <wsdl:input message="tns:salir" name="salir" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/salir" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/salir" />
+         <wsdl:output message="tns:salirResponse" name="salirResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/salirResponse" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/salir/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaInformacionUsuarioFirmado">
+         <wsdl:input message="tns:recuperaInformacionUsuarioFirmado" name="recuperaInformacionUsuarioFirmado" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaInformacionUsuarioFirmado" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaInformacionUsuarioFirmado" />
+         <wsdl:output message="tns:recuperaInformacionUsuarioFirmadoResponse" name="recuperaInformacionUsuarioFirmadoResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/usuarioDetalleDtoRecuperaInformacionUsuarioFirmadoOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/usuarioDetalleDtoRecuperaInformacionUsuarioFirmadoOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaInformacionUsuarioFirmado/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaCuentaCreditoPorFechaVencimiento">
+         <wsdl:input message="tns:recuperaCuentaCreditoPorFechaVencimiento" name="recuperaCuentaCreditoPorFechaVencimiento" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaVencimiento" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaVencimiento" />
+         <wsdl:output message="tns:recuperaCuentaCreditoPorFechaVencimientoResponse" name="recuperaCuentaCreditoPorFechaVencimientoResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoPorFechaVencimientoOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoPorFechaVencimientoOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaVencimiento/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaEstadoCuenta">
+         <wsdl:input message="tns:recuperaEstadoCuenta" name="recuperaEstadoCuenta" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaEstadoCuenta" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaEstadoCuenta" />
+         <wsdl:output message="tns:recuperaEstadoCuentaResponse" name="recuperaEstadoCuentaResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/estadoCuentaGridRespuestaDtoRecuperaEstadoCuentaOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/estadoCuentaGridRespuestaDtoRecuperaEstadoCuentaOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaEstadoCuenta/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaBalanceCuentasInversiones">
+         <wsdl:input message="tns:recuperaBalanceCuentasInversiones" name="recuperaBalanceCuentasInversiones" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasBiometrica" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasBiometrica" />
+         <wsdl:output message="tns:recuperaBalanceCuentasInversionesResponse" name="recuperaBalanceCuentasInversionesResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaInversionGridRespuestaDtoRecuperaBalanceCuentasInversionesOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaInversionGridRespuestaDtoRecuperaBalanceCuentasInversionesOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasInversiones/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="firmaUsuario">
+         <wsdl:input message="tns:firmaUsuario" name="firmaUsuario" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/firmaUsuario" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/firmaUsuario" />
+         <wsdl:output message="tns:firmaUsuarioResponse" name="firmaUsuarioResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/sessionIdFirmaUsuarioOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/sessionIdFirmaUsuarioOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/firmaUsuario/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaBalanceCuentasCredito">
+         <wsdl:input message="tns:recuperaBalanceCuentasCredito" name="recuperaBalanceCuentasCredito" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasCredito" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasCredito" />
+         <wsdl:output message="tns:recuperaBalanceCuentasCreditoResponse" name="recuperaBalanceCuentasCreditoResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaBalanceCuentasCreditoOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaBalanceCuentasCreditoOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasCredito/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaCuentaCreditoMovimientos">
+         <wsdl:input message="tns:recuperaCuentaCreditoMovimientos" name="recuperaCuentaCreditoMovimientos" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoMovimientos" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoMovimientos" />
+         <wsdl:output message="tns:recuperaCuentaCreditoMovimientosResponse" name="recuperaCuentaCreditoMovimientosResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoMovimientosOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoMovimientosOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoMovimientos/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaBalanceCuentasBiometrica">
+         <wsdl:input message="tns:recuperaBalanceCuentasBiometrica" name="recuperaBalanceCuentasBiometrica" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasBiometrica" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasBiometrica" />
+         <wsdl:output message="tns:recuperaBalanceCuentasBiometricaResponse" name="recuperaBalanceCuentasBiometricaResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaBiometricaGridRespuestaDtoRecuperaBalanceCuentasBiometricaOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaBiometricaGridRespuestaDtoRecuperaBalanceCuentasBiometricaOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasBiometrica/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaCuentaCreditoPorFechaValor">
+         <wsdl:input message="tns:recuperaCuentaCreditoPorFechaValor" name="recuperaCuentaCreditoPorFechaValor" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaValor" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaValor" />
+         <wsdl:output message="tns:recuperaCuentaCreditoPorFechaValorResponse" name="recuperaCuentaCreditoPorFechaValorResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoPorFechaValorOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoGridRespuestaDtoRecuperaCuentaCreditoPorFechaValorOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaValor/Fault/MeException" />
+      </wsdl:operation>
+      <wsdl:operation name="recuperaDetalleCuentaCredito">
+         <wsdl:input message="tns:recuperaDetalleCuentaCredito" name="recuperaDetalleCuentaCredito" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaDetalleCuentaCredito" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaDetalleCuentaCredito" />
+         <wsdl:output message="tns:recuperaDetalleCuentaCreditoResponse" name="recuperaDetalleCuentaCreditoResponse" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoDetalleDtoRecuperaDetalleCuentaCreditoOut" wsaw:Action="http://ws.me.mfm.habil.mx/MeWs/cuentaCreditoDetalleDtoRecuperaDetalleCuentaCreditoOut" />
+         <wsdl:fault message="tns:MeException" name="MeException" wsam:Action="http://ws.me.mfm.habil.mx/MeWs/recuperaDetalleCuentaCredito/Fault/MeException" />
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="MeWsServiceSoapBinding" type="tns:MeWs">
+      <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+      <wsdl:operation name="recuperaInformacionUsuarioFirmado">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaInformacionUsuarioFirmado" style="document" />
+         <wsdl:input name="recuperaInformacionUsuarioFirmado">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaInformacionUsuarioFirmadoResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="salir">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/salir" style="document" />
+         <wsdl:input name="salir">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="salirResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaCuentaCreditoPorFechaVencimiento">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaVencimiento" style="document" />
+         <wsdl:input name="recuperaCuentaCreditoPorFechaVencimiento">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaCuentaCreditoPorFechaVencimientoResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaEstadoCuenta">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaEstadoCuenta" style="document" />
+         <wsdl:input name="recuperaEstadoCuenta">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaEstadoCuentaResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaBalanceCuentasInversiones">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasInversiones" style="document" />
+         <wsdl:input name="recuperaBalanceCuentasInversiones">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaBalanceCuentasInversionesResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="firmaUsuario">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/firmaUsuario" style="document" />
+         <wsdl:input name="firmaUsuario">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="firmaUsuarioResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaBalanceCuentasCredito">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasCredito" style="document" />
+         <wsdl:input name="recuperaBalanceCuentasCredito">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaBalanceCuentasCreditoResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaCuentaCreditoMovimientos">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoMovimientos" style="document" />
+         <wsdl:input name="recuperaCuentaCreditoMovimientos">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaCuentaCreditoMovimientosResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaBalanceCuentasBiometrica">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaBalanceCuentasBiometrica" style="document" />
+         <wsdl:input name="recuperaBalanceCuentasBiometrica">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaBalanceCuentasBiometricaResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaCuentaCreditoPorFechaValor">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaCuentaCreditoPorFechaValor" style="document" />
+         <wsdl:input name="recuperaCuentaCreditoPorFechaValor">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaCuentaCreditoPorFechaValorResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="recuperaDetalleCuentaCredito">
+         <soap:operation soapAction="ws.me.mfm.habil.mx/MeWs/recuperaDetalleCuentaCredito" style="document" />
+         <wsdl:input name="recuperaDetalleCuentaCredito">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="recuperaDetalleCuentaCreditoResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="MeException">
+            <soap:fault name="MeException" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="MeWsService">
+      <wsdl:port binding="tns:MeWsServiceSoapBinding" name="MeWsPort">
+         <soap:address location="http://localhost:8089/me/me-ws" />
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>
