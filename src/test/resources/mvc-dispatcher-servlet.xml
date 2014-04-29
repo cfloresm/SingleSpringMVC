@@ -13,25 +13,21 @@
 
 	<mvc:annotation-driven />
 	
+	<!-- Dozzer mapping  -->
 	<bean  class="org.dozer.DozerBeanMapper">
 		<property name="mappingFiles">
-		<value>META-INF/dozer/testMapping.xml</value>
-			
+			<value>META-INF/dozer/testMapping.xml</value>			
 		</property>
 	</bean>
 
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/views/</value>
 		</property>
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
-	</bean>
-	
-	
-	
+	</bean>	
 </beans>
 	
 

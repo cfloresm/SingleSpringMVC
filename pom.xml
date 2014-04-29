@@ -12,6 +12,9 @@
 		<spring.version>3.2.3.RELEASE</spring.version>
 		<jackson-mapper.version>1.9.13</jackson-mapper.version>
 		<cxf.version>2.7.10</cxf.version>
+		<dozer.version>5.4.0</dozer.version>
+		<junit.version>4.8.1</junit.version>
+		<servlet.version>2.5</servlet.version>
 	</properties>
 
 	<dependencies>
@@ -40,8 +43,43 @@
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>${jackson-mapper.version}</version>
 		</dependency>
-	</dependencies>
+		
+		<!-- 	Dependency for dozzer 	-->
+		<dependency>
+		    <groupId>net.sf.dozer</groupId>
+		    <artifactId>dozer</artifactId>		   
+		   	<version>${dozer.version}</version>
+		</dependency>
+		
+		<!--  Dependency for inject Junit	-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			  <scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>1.0.0.RELEASE</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>compile</scope>
+		</dependency>
 
+	</dependencies>
+	
 	<build>
 		<finalName>mfmApi</finalName>
 		<plugins>

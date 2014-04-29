@@ -1,4 +1,4 @@
-package com.test.rest.controller;
+package com.test.rest.bean;
 
 public class Output {
 	private String idSession;
