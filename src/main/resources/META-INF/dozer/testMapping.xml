@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+          
+          <!-- Basic Mapping between objects -->
+	<mapping>
+		<class-a>com.test.rest.test.UserDummy</class-a>
+		<class-b>com.test.rest.test.UserDummyReplica</class-b>
+		<field>
+			<a>name</a>
+			<b>nameReplica</b>
+		</field>
+		<field>
+			<a>firstName</a>
+			<b>firstNameReplica</b>
+		</field>	
+		<field>
+			<a>listaString</a>
+			<b>listaStringReplica</b>
+		</field>
+		<field>
+			<a>age</a>
+			<b>ageReplica</b>
+		</field>
+	</mapping>
+	
+</mappings>
