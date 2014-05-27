@@ -33,8 +33,7 @@ import org.springframework.web.context.WebApplicationContext;
 public class DozzerTest {
 
 	// Class injected for spring. This class make of match between objects
-	@Autowired
-	DozerBeanMapper dozzerMapper;
+	private static DozerBeanMapper dozzerMapper;
 
 	@Autowired
 	private WebApplicationContext wac;
@@ -46,9 +45,18 @@ public class DozzerTest {
 		mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
 	}
 
+	/**
+	 * Method for inject method with state static
+	 */
+	@Autowired
+	public void setDatabaseConfig(DozerBeanMapper dozzerMapper) {
+		DozzerTest.dozzerMapper = dozzerMapper;
+	}
+
 	// Method for look a simple mapping between objects, pass data from object A to object B
 	@Test
 	public void dozzer() {
+
 		UserDummy userDummy = new UserDummy();
 		UserDummyReplica userReplica;
 		List<String> listaNombres = new ArrayList<String>();
@@ -61,10 +69,35 @@ public class DozzerTest {
 		listaNombres.add("Sergio Pitol");
 
 		userDummy.setListaString(listaNombres);
-
-		// Invoke mapping with dozzer(see mapping: testMapping.xml)
 		userReplica = dozzerMapper.map(userDummy, UserDummyReplica.class);
 		System.out.println("Result mapping: " + userReplica);
+		// invoke
+		DozzerTest.getDozzerMapping();
+	}
+
+	/**
+	 * Test static, is the same logic with dozzer but inside method static.
+	 */
+	public static void getDozzerMapping() {
+
+		System.out.println("Static test init ");
+		UserDummy userDummy = new UserDummy();
+		UserDummyReplica userReplica;
+		List<String> listaNombres = new ArrayList<String>();
+
+		userDummy.setAge(21);
+		userDummy.setFirstName("King");
+		userDummy.setName("Lion");
+
+		listaNombres.add("Pedro Neruda");
+		listaNombres.add("Andrea Cardenas");
+		listaNombres.add("Rosario Carbajal");
+
+		userDummy.setListaString(listaNombres);
+
+		userReplica = dozzerMapper.map(userDummy, UserDummyReplica.class);
+		System.out.println("Static test end " + userReplica);
+
 	}
 
 }
