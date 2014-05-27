@@ -12,11 +12,15 @@
 	<context:component-scan base-package="com.test.rest.controller,com.test.rest.test" />
 
 	<mvc:annotation-driven />
+	<!-- Bean for inject static method-->
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<!-- Next value is the full qualified name of the static setter including method name -->
+		<property name="staticMethod" value="com.test.rest.test.DozzerTest.setDatabaseConfig" />	
+	</bean>
 	
-	<bean  class="org.dozer.DozerBeanMapper">
+	<bean class="org.dozer.DozerBeanMapper">
 		<property name="mappingFiles">
-		<value>META-INF/dozer/testMapping.xml</value>
-			
+			<value>META-INF/dozer/testMapping.xml</value>
 		</property>
 	</bean>
 
@@ -29,9 +33,9 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
-	
-	
-	
+
+
+
 </beans>
 	
 
